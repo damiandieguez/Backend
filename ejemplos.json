@@ -1,0 +1,138 @@
+{
+  "pacientes": [
+    {
+      "_id": {
+        "$oid": "60d5ecb8b5c9c22b5c8e4001"
+      },
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "dni": "35123456",
+      "fecha_nacimiento": {
+        "$date": "1990-05-15T00:00:00Z"
+      },
+      "contacto": {
+        "email": "juan.perez@email.com",
+        "telefono": "+541145678901",
+        "direccion": "Av. Corrientes 1234, CABA"
+      },
+      "historia_clinica": {
+        "fecha_creacion": {
+          "$date": "2021-01-10T00:00:00Z"
+        },
+        "antecedentes": [
+          "Hipertensión arterial leve",
+          "Cirugía de apéndice (2015)"
+        ],
+        "alergias": [
+          "Penicilina",
+          "Polen"
+        ],
+        "observaciones": "Paciente realiza chequeos anuales con regularidad."
+      }
+    },
+    {
+      "_id": {
+        "$oid": "60d5ecb8b5c9c22b5c8e4002"
+      },
+      "nombre": "Maria",
+      "apellido": "Gómez",
+      "dni": "28987654",
+      "fecha_nacimiento": {
+        "$date": "1982-11-03T00:00:00Z"
+      },
+      "contacto": {
+        "email": "maria.gomez@email.com",
+        "telefono": "+541198765432",
+        "direccion": "Calle San Martín 456, Córdoba"
+      },
+      "historia_clinica": {
+        "fecha_creacion": {
+          "$date": "2020-06-22T00:00:00Z"
+        },
+        "antecedentes": [
+          "Asma bronquial en la infancia"
+        ],
+        "alergias": [],
+        "observaciones": "Sin novedades en últimos análisis."
+      }
+    }
+  ],
+  "profesionales": [
+    {
+      "_id": {
+        "$oid": "60d5ecb8b5c9c22b5c8e4010"
+      },
+      "nombre": "Carlos",
+      "apellido": "Rodríguez",
+      "matricula": "MN-45892",
+      "contacto": {
+        "email": "carlos.rodriguez@hospital.com",
+        "telefono": "+541133334444"
+      },
+      "especialidades": [
+        {
+          "nombre": "Cardiología",
+          "descripcion": "Especialista en prevención y tratamiento de enfermedades cardiovasculares."
+        },
+        {
+          "nombre": "Medicina Interna",
+          "descripcion": "Atención integral del adulto."
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "60d5ecb8b5c9c22b5c8e4011"
+      },
+      "nombre": "Laura",
+      "apellido": "Fernández",
+      "matricula": "MN-78123",
+      "contacto": {
+        "email": "laura.fernandez@hospital.com",
+        "telefono": "+541155556666"
+      },
+      "especialidades": [
+        {
+          "nombre": "Dermatología",
+          "descripcion": "Diagnóstico y tratamiento de afecciones de la piel y mucosas."
+        }
+      ]
+    }
+  ],
+  "turnos": [
+    {
+      "_id": {
+        "$oid": "60d5ecb8b5c9c22b5c8e4020"
+      },
+      "paciente_id": {
+        "$oid": "60d5ecb8b5c9c22b5c8e4001"
+      },
+      "profesional_id": {
+        "$oid": "60d5ecb8b5c9c22b5c8e4010"
+      },
+      "especialidad": "Cardiología",
+      "fecha_hora": {
+        "$date": "2026-10-15T10:30:00Z"
+      },
+      "estado": "CONFIRMADO",
+      "motivo": "Control anual de rutina"
+    },
+    {
+      "_id": {
+        "$oid": "60d5ecb8b5c9c22b5c8e4021"
+      },
+      "paciente_id": {
+        "$oid": "60d5ecb8b5c9c22b5c8e4002"
+      },
+      "profesional_id": {
+        "$oid": "60d5ecb8b5c9c22b5c8e4011"
+      },
+      "especialidad": "Dermatología",
+      "fecha_hora": {
+        "$date": "2026-10-16T15:00:00Z"
+      },
+      "estado": "PENDIENTE",
+      "motivo": "Revisión de lunares"
+    }
+  ]
+}
